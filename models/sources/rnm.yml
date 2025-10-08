@@ -1,0 +1,25 @@
+sources:
+  - name: rnm
+    database: nextgenlearning-sandbox
+    schema: RNM
+    tables:
+      - name: marche
+      - name: bassin
+      - name: agrumes_2023
+      - name: agrumes_2024
+      - name: agrumes_2025
+      - name: baies_petits_fruits_2023
+      - name: baies_petits_fruits_2024
+      - name: baies_petits_fruits_2025
+      - name: fruits_a_noyau_2023
+      - name: fruits_a_noyau_2024
+      - name: fruits_a_noyau_2025
+      - name: fruits_a_pepins_2023
+      - name: fruits_a_pepins_2024
+      - name: fruits_a_pepins_2025
+      - name: fruits_exotiques_2023
+      - name: fruits_exotiques_2024
+      - name: fruits_exotiques_2025
+      - name: fruits_secs_2023
+      - name: fruits_secs_2024
+      - name: fruits_secs_2025
