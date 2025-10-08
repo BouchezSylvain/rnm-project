@@ -1,0 +1,208 @@
+version: 2
+
+models:
+  - name: libelle_cotation
+    description: "Table représentant les cotations de chaque libellé pour chaque mois"
+    columns:
+      - name: produit
+        description: "Le produit du libellé, il est obtenu grâce à 2 REGEX récupérant le(s) premiers mots en majuscule du libellé"
+        tests:
+          - not_null
+      - name: libelle
+        description: "Le libellé, en général constitué du nom du produit en majuscule puis d'une suite de caractéristiques"
+        tests:
+          - not_null
+      - name: categorie
+        description: "La catégorie du produit, elle est ajouté via le fichier dont la cotation provient"
+        tests:
+          - not_null
+      - name: marche
+        description: "Le marché du produit, il peut être précis comme plus général"
+        tests:
+          - not_null
+      - name: unite
+        description: "L'unité du libellé, la plupart du temps c'est au kilo mais certains sont plus vagues"
+        tests:
+          - not_null
+      - name: prix_cotation
+        description: "Le prix de chaque cotation, la valeur peut être nulle si il n'y a pas de prix à cette date pour ce libellé"
+      - name: date_cotation
+        description: "La date de la cotation, elle est ramené au premier du mois"
+        tests:
+          - not_null
+      - name: annee
+        description: "L'année de la cotation"
+        tests:
+          - not_null
+      - name: prix_mois_precedent
+        description: "Le prix du mois précédent pour ce libellé"
+      - name: variation_mois_precedent
+        description: "La variation par rapport au mois précédent"
+      - name: variation_pourcentage_mois_precedent
+        description: "La variation en pourcentage par rapport au mois précédent"
+
+  - name: produit_cotation
+    description: "Table représentant les cotations de chaque produit, pour chaque mois. Un produit est l'aggrégation de tous ses libellés"
+    columns:
+      - name: categorie
+        description: "La catégorie du produit"
+        tests:
+          - not_null
+      - name: produit
+        description: "Le produit du libellé"
+        tests:
+          - not_null
+      - name: marche
+        description: "Le marché du produit, il peut être précis comme plus général"
+        tests:
+          - not_null
+      - name: date_cotation
+        description: "La date de la cotation, elle est au format DATE"
+        tests:
+          - not_null
+      - name: produit_prix_cotation
+        description: "L'aggrégation en moyenne des prix des cotations des libellés"
+      - name: produit_prix_mois_precedent
+        description: "Le prix du mois précédent pour ce produit après l'aggrégation"
+      - name: produit_variation_prix_mois_precedent
+        description: "La différence entre ce mois-ci et le mois précédent"
+      - name: produit_variation_pourcentage_prix_mois_precedent
+        description: "La différence entre ce mois-ci et le mois précédent en pourcentage"
+  - name: info_produit_bassin
+    description: "Table représentant les cotations des produits regroupé par bassin"
+    columns:
+      - name: categorie
+        description: "La catégorie du produit"
+        tests:
+          - not_null
+      - name: bassin
+        description: "Le bassin du produit"
+        tests:
+          - not_null
+      - name: produit
+        description: "Le nom du produit"
+        tests:
+          - not_null
+      - name: date_cotation
+        description: "La date de la cotation, elle est au format DATE"
+        tests:
+          - not_null
+      - name: moyenne_produit_prix_cotation
+        description: "L'aggrégation en moyenne des prix des cotations des produits, elle est aggrégé par bassin"
+      - name: prix_min
+        description: "Le prix minimum pour ce produit dans un bassin"
+      - name: marche_min
+        description: "Le marche ou il y a le prix minimum"
+      - name: moyenne_produit_variation_prix_mois_precedent
+        description: "L'aggrégation des variation des prix du mois précédent"
+  - name: info_produit_marche
+    description: "Table représentant les cotations des produits regroupé par marché"
+    columns:
+      - name: categorie
+        description: "La catégorie du produit"
+        tests:
+          - not_null
+      - name: produit
+        description: "Le libellé du produit"
+        tests:
+          - not_null
+      - name: bassin
+        description: "Le bassin du libellé"
+        tests:
+          - not_null
+      - name: date_cotation
+        description: "La date de la cotation, elle est au format DATE"
+        tests:
+          - not_null
+      - name: marche
+        description: "Le marché du produit, il peut être précis comme plus général"
+        tests:
+          - not_null
+      - name: adresse
+        description: "L'adresse du marché, elle sert à situé les emplacements des marchés sur la carte"
+        tests:
+          - not_null
+      - name: prix_moyen
+        description: "L'aggrégation des prix d'un produit regroupé par marché"
+  - name: carte_chaleur
+    description: "Table pour représenter la carte de chaleur. Elle agrège les cotations pour avoir une moyenne du prix des produits par mois de l'année."
+    columns:
+      - name: categorie
+        description: "La catégorie du libellé"
+        tests:
+          - not_null
+      - name: produit
+        description: "Le libellé du produit"
+        tests:
+          - not_null
+      - name: mois
+        description: "Le mois du produit. Ce nom de colonne est différent pour ne pas être impacté par les filtres sur LookerStudio"
+        tests:
+          - not_null
+      - name: moyenne_prix
+        description: "L'aggrégation des prix d'un produit regroupé par mois"
+      - name: prix_max
+        description: "Le prix maximum pour un mois"
+      - name: prix_min
+        description: "Le prix minimum pour un mois"
+  - name: historique_produit
+    description: "Table pour représenter l'historique d'un produit "
+    columns:
+      - name: categorie
+        description: "La catégorie du libellé"
+        tests:
+          - not_null
+      - name: produit
+        description: "Le libellé du produit"
+        tests:
+          - not_null
+      - name: mois
+        description: "Le mois du produit. Ce nom de colonne est différent pour ne pas être impacté par les filtres sur LookerStudio"
+        tests:
+          - not_null
+      - name: bassin
+        description: "Le bassin du produit"
+        tests:
+          - not_null
+      - name: prix_moyen
+        description: "L'aggrégation en moyenne des prix des cotations des produits, regroupé par bassin"
+      - name: prix_min
+        description: "Le prix minimum pour un produit dans un bassin"
+      - name: variation_moyenne_mois_precedent
+        description: "L'aggrégation des variation des prix du mois précédent"
+      - name: marche_min
+        description: "Le marche ou il y a le prix minimum"
+  - name: marche
+    description: "La liste des marchés avec les bassins qui lui sont lié et leurs coordonnées ainsi que l'adresse"
+    columns:
+      - name: libelle
+        description: "Le nom du marché"
+        tests:
+          - not_null
+      - name: bassin
+        description: "Le bassin du marché"
+        tests:
+          - not_null
+      - name: lat
+        description: "La position latitude du marché"
+        tests:
+          - not_null
+      - name: long
+        description: "La position longitude du marché"
+        tests:
+          - not_null
+      - name: coordonnees
+        description: "La position latitude et longitude concatenné du marché"
+        tests:
+          - not_null
+      - name: adresse
+        description: "L'adresse du marché, utilisé pour l'afficher sur la carte"
+        tests:
+          - not_null
+  - name: bassin
+    description: "La liste des bassins"
+    columns:
+      - name: libelle
+        description: "Le libellé du bassin"
+        tests:
+          - not_null
