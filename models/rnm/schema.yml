@@ -1,6 +1,780 @@
 version: 2
 
 models:
+  - name: agrumes_2023
+    description: "Table avec les cotations des libellés des agrumes en 2023, récupéré depuis le site RNM"
+    columns:
+      - name: Stade
+        description: "Le stade pour ce libellé"
+        tests:
+          - not_null
+      - name: Marché
+        description: "Le marché pour ce libellé"
+        tests:
+          - not_null
+      - name: Libellé
+        description: "Le libellé, il est composé du nom du produit en majuscule, puis des caractéristiques, ce qui forme le libellé"
+        tests:
+          - not_null
+      - name: Unité
+        description: "L'unité pour ce libellé libellé"
+        tests:
+          - not_null
+      - name: Janvier
+        description: "Les cotations de janvier pour les libellés"
+      - name: Février
+        description: "Les cotations de février pour les libellés"
+      - name: Mars
+        description: "Les cotations de mars pour les libellés"
+      - name: Avril
+        description: "Les cotations de avril pour les libellés"
+      - name: Mai
+        description: "Les cotations de mai pour les libellés"
+      - name: Juin
+        description: "Les cotations de juin pour les libellés"
+      - name: Juillet
+        description: "Les cotations de juillet pour les libellés"
+      - name: Août
+        description: "Les cotations de août pour les libellés"
+      - name: Septembre
+        description: "Les cotations de septembre pour les libellés"
+      - name: Octobre
+        description: "Les cotations de octobre pour les libellés"
+      - name: Novembre
+        description: "Les cotations de novembre pour les libellés"
+      - name: Décembre
+        description: "Les cotations de décembre pour les libellés"
+  - name: agrumes_2024
+    description: "Table avec les cotations des libellés des agrumes en 2024, récupéré depuis le site RNM"
+    columns:
+      - name: Stade
+        description: "Le stade pour ce libellé"
+        tests:
+          - not_null
+      - name: Marché
+        description: "Le marché pour ce libellé"
+        tests:
+          - not_null
+      - name: Libellé
+        description: "Le libellé, il est composé du nom du produit en majuscule, puis des caractéristiques, ce qui forme le libellé"
+        tests:
+          - not_null
+      - name: Unité
+        description: "L'unité pour ce libellé libellé"
+        tests:
+          - not_null
+      - name: Janvier
+        description: "Les cotations de janvier pour les libellés"
+      - name: Février
+        description: "Les cotations de février pour les libellés"
+      - name: Mars
+        description: "Les cotations de mars pour les libellés"
+      - name: Avril
+        description: "Les cotations de avril pour les libellés"
+      - name: Mai
+        description: "Les cotations de mai pour les libellés"
+      - name: Juin
+        description: "Les cotations de juin pour les libellés"
+      - name: Juillet
+        description: "Les cotations de juillet pour les libellés"
+      - name: Août
+        description: "Les cotations de août pour les libellés"
+      - name: Septembre
+        description: "Les cotations de septembre pour les libellés"
+      - name: Octobre
+        description: "Les cotations de octobre pour les libellés"
+      - name: Novembre
+        description: "Les cotations de novembre pour les libellés"
+      - name: Décembre
+        description: "Les cotations de décembre pour les libellés"
+  - name: agrumes_2025
+    description: "Table avec les cotations des libellés des agrumes en 2025, récupéré depuis le site RNM"
+    columns:
+      - name: Stade
+        description: "Le stade pour ce libellé"
+        tests:
+          - not_null
+      - name: Marché
+        description: "Le marché pour ce libellé"
+        tests:
+          - not_null
+      - name: Libellé
+        description: "Le libellé, il est composé du nom du produit en majuscule, puis des caractéristiques, ce qui forme le libellé"
+        tests:
+          - not_null
+      - name: Unité
+        description: "L'unité pour ce libellé libellé"
+        tests:
+          - not_null
+      - name: Janvier
+        description: "Les cotations de janvier pour les libellés"
+      - name: Février
+        description: "Les cotations de février pour les libellés"
+      - name: Mars
+        description: "Les cotations de mars pour les libellés"
+      - name: Avril
+        description: "Les cotations de avril pour les libellés"
+      - name: Mai
+        description: "Les cotations de mai pour les libellés"
+      - name: Juin
+        description: "Les cotations de juin pour les libellés"
+      - name: Juillet
+        description: "Les cotations de juillet pour les libellés"
+      - name: Août
+        description: "Les cotations de août pour les libellés"
+      - name: Septembre
+        description: "Les cotations de septembre pour les libellés"
+      - name: Octobre
+        description: "Les cotations de octobre pour les libellés"
+      - name: Novembre
+        description: "Les cotations de novembre pour les libellés"
+      - name: Décembre
+        description: "Les cotations de décembre pour les libellés"
+  - name: baies_petits_fruits_2023
+    description: "Table avec les cotations des libellés des baies et petits fruits en 2023, récupéré depuis le site RNM"
+    columns:
+      - name: Stade
+        description: "Le stade pour ce libellé"
+        tests:
+          - not_null
+      - name: Marché
+        description: "Le marché pour ce libellé"
+        tests:
+          - not_null
+      - name: Libellé
+        description: "Le libellé, il est composé du nom du produit en majuscule, puis des caractéristiques, ce qui forme le libellé"
+        tests:
+          - not_null
+      - name: Unité
+        description: "L'unité pour ce libellé libellé"
+        tests:
+          - not_null
+      - name: Janvier
+        description: "Les cotations de janvier pour les libellés"
+      - name: Février
+        description: "Les cotations de février pour les libellés"
+      - name: Mars
+        description: "Les cotations de mars pour les libellés"
+      - name: Avril
+        description: "Les cotations de avril pour les libellés"
+      - name: Mai
+        description: "Les cotations de mai pour les libellés"
+      - name: Juin
+        description: "Les cotations de juin pour les libellés"
+      - name: Juillet
+        description: "Les cotations de juillet pour les libellés"
+      - name: Août
+        description: "Les cotations de août pour les libellés"
+      - name: Septembre
+        description: "Les cotations de septembre pour les libellés"
+      - name: Octobre
+        description: "Les cotations de octobre pour les libellés"
+      - name: Novembre
+        description: "Les cotations de novembre pour les libellés"
+      - name: Décembre
+        description: "Les cotations de décembre pour les libellés"
+  - name: baies_petits_fruits_2024
+    description: "Table avec les cotations des libellés des baies et petits fruits en 2024, récupéré depuis le site RNM"
+    columns:
+      - name: Stade
+        description: "Le stade pour ce libellé"
+        tests:
+          - not_null
+      - name: Marché
+        description: "Le marché pour ce libellé"
+        tests:
+          - not_null
+      - name: Libellé
+        description: "Le libellé, il est composé du nom du produit en majuscule, puis des caractéristiques, ce qui forme le libellé"
+        tests:
+          - not_null
+      - name: Unité
+        description: "L'unité pour ce libellé libellé"
+        tests:
+          - not_null
+      - name: Janvier
+        description: "Les cotations de janvier pour les libellés"
+      - name: Février
+        description: "Les cotations de février pour les libellés"
+      - name: Mars
+        description: "Les cotations de mars pour les libellés"
+      - name: Avril
+        description: "Les cotations de avril pour les libellés"
+      - name: Mai
+        description: "Les cotations de mai pour les libellés"
+      - name: Juin
+        description: "Les cotations de juin pour les libellés"
+      - name: Juillet
+        description: "Les cotations de juillet pour les libellés"
+      - name: Août
+        description: "Les cotations de août pour les libellés"
+      - name: Septembre
+        description: "Les cotations de septembre pour les libellés"
+      - name: Octobre
+        description: "Les cotations de octobre pour les libellés"
+      - name: Novembre
+        description: "Les cotations de novembre pour les libellés"
+      - name: Décembre
+        description: "Les cotations de décembre pour les libellés"
+  - name: baies_petits_fruits_2025
+    description: "Table avec les cotations des libellés des baies et petits fruits en 2025, récupéré depuis le site RNM"
+    columns:
+      - name: Stade
+        description: "Le stade pour ce libellé"
+        tests:
+          - not_null
+      - name: Marché
+        description: "Le marché pour ce libellé"
+        tests:
+          - not_null
+      - name: Libellé
+        description: "Le libellé, il est composé du nom du produit en majuscule, puis des caractéristiques, ce qui forme le libellé"
+        tests:
+          - not_null
+      - name: Unité
+        description: "L'unité pour ce libellé libellé"
+        tests:
+          - not_null
+      - name: Janvier
+        description: "Les cotations de janvier pour les libellés"
+      - name: Février
+        description: "Les cotations de février pour les libellés"
+      - name: Mars
+        description: "Les cotations de mars pour les libellés"
+      - name: Avril
+        description: "Les cotations de avril pour les libellés"
+      - name: Mai
+        description: "Les cotations de mai pour les libellés"
+      - name: Juin
+        description: "Les cotations de juin pour les libellés"
+      - name: Juillet
+        description: "Les cotations de juillet pour les libellés"
+      - name: Août
+        description: "Les cotations de août pour les libellés"
+      - name: Septembre
+        description: "Les cotations de septembre pour les libellés"
+      - name: Octobre
+        description: "Les cotations de octobre pour les libellés"
+      - name: Novembre
+        description: "Les cotations de novembre pour les libellés"
+      - name: Décembre
+        description: "Les cotations de décembre pour les libellés"
+  - name: fruits_a_noyau_2023
+    description: "Table avec les cotations des libellés des fruits à noyau en 2023, récupéré depuis le site RNM"
+    columns:
+      - name: Stade
+        description: "Le stade pour ce libellé"
+        tests:
+          - not_null
+      - name: Marché
+        description: "Le marché pour ce libellé"
+        tests:
+          - not_null
+      - name: Libellé
+        description: "Le libellé, il est composé du nom du produit en majuscule, puis des caractéristiques, ce qui forme le libellé"
+        tests:
+          - not_null
+      - name: Unité
+        description: "L'unité pour ce libellé libellé"
+        tests:
+          - not_null
+      - name: Janvier
+        description: "Les cotations de janvier pour les libellés"
+      - name: Février
+        description: "Les cotations de février pour les libellés"
+      - name: Mars
+        description: "Les cotations de mars pour les libellés"
+      - name: Avril
+        description: "Les cotations de avril pour les libellés"
+      - name: Mai
+        description: "Les cotations de mai pour les libellés"
+      - name: Juin
+        description: "Les cotations de juin pour les libellés"
+      - name: Juillet
+        description: "Les cotations de juillet pour les libellés"
+      - name: Août
+        description: "Les cotations de août pour les libellés"
+      - name: Septembre
+        description: "Les cotations de septembre pour les libellés"
+      - name: Octobre
+        description: "Les cotations de octobre pour les libellés"
+      - name: Novembre
+        description: "Les cotations de novembre pour les libellés"
+      - name: Décembre
+        description: "Les cotations de décembre pour les libellés"
+  - name: fruits_a_noyau_2024
+    description: "Table avec les cotations des libellés des fruits à noyau en 2024, récupéré depuis le site RNM"
+    columns:
+      - name: Stade
+        description: "Le stade pour ce libellé"
+        tests:
+          - not_null
+      - name: Marché
+        description: "Le marché pour ce libellé"
+        tests:
+          - not_null
+      - name: Libellé
+        description: "Le libellé, il est composé du nom du produit en majuscule, puis des caractéristiques, ce qui forme le libellé"
+        tests:
+          - not_null
+      - name: Unité
+        description: "L'unité pour ce libellé libellé"
+        tests:
+          - not_null
+      - name: Janvier
+        description: "Les cotations de janvier pour les libellés"
+      - name: Février
+        description: "Les cotations de février pour les libellés"
+      - name: Mars
+        description: "Les cotations de mars pour les libellés"
+      - name: Avril
+        description: "Les cotations de avril pour les libellés"
+      - name: Mai
+        description: "Les cotations de mai pour les libellés"
+      - name: Juin
+        description: "Les cotations de juin pour les libellés"
+      - name: Juillet
+        description: "Les cotations de juillet pour les libellés"
+      - name: Août
+        description: "Les cotations de août pour les libellés"
+      - name: Septembre
+        description: "Les cotations de septembre pour les libellés"
+      - name: Octobre
+        description: "Les cotations de octobre pour les libellés"
+      - name: Novembre
+        description: "Les cotations de novembre pour les libellés"
+      - name: Décembre
+        description: "Les cotations de décembre pour les libellés"
+  - name: fruits_a_noyau_2025
+    description: "Table avec les cotations des libellés des fruits à noyau en 2025, récupéré depuis le site RNM"
+    columns:
+      - name: Stade
+        description: "Le stade pour ce libellé"
+        tests:
+          - not_null
+      - name: Marché
+        description: "Le marché pour ce libellé"
+        tests:
+          - not_null
+      - name: Libellé
+        description: "Le libellé, il est composé du nom du produit en majuscule, puis des caractéristiques, ce qui forme le libellé"
+        tests:
+          - not_null
+      - name: Unité
+        description: "L'unité pour ce libellé libellé"
+        tests:
+          - not_null
+      - name: Janvier
+        description: "Les cotations de janvier pour les libellés"
+      - name: Février
+        description: "Les cotations de février pour les libellés"
+      - name: Mars
+        description: "Les cotations de mars pour les libellés"
+      - name: Avril
+        description: "Les cotations de avril pour les libellés"
+      - name: Mai
+        description: "Les cotations de mai pour les libellés"
+      - name: Juin
+        description: "Les cotations de juin pour les libellés"
+      - name: Juillet
+        description: "Les cotations de juillet pour les libellés"
+      - name: Août
+        description: "Les cotations de août pour les libellés"
+      - name: Septembre
+        description: "Les cotations de septembre pour les libellés"
+      - name: Octobre
+        description: "Les cotations de octobre pour les libellés"
+      - name: Novembre
+        description: "Les cotations de novembre pour les libellés"
+      - name: Décembre
+        description: "Les cotations de décembre pour les libellés"
+  - name: fruits_a_pepins_2023
+    description: "Table avec les cotations des libellés des fruits à pépins en 2023, récupéré depuis le site RNM"
+    columns:
+      - name: Stade
+        description: "Le stade pour ce libellé"
+        tests:
+          - not_null
+      - name: Marché
+        description: "Le marché pour ce libellé"
+        tests:
+          - not_null
+      - name: Libellé
+        description: "Le libellé, il est composé du nom du produit en majuscule, puis des caractéristiques, ce qui forme le libellé"
+        tests:
+          - not_null
+      - name: Unité
+        description: "L'unité pour ce libellé libellé"
+        tests:
+          - not_null
+      - name: Janvier
+        description: "Les cotations de janvier pour les libellés"
+      - name: Février
+        description: "Les cotations de février pour les libellés"
+      - name: Mars
+        description: "Les cotations de mars pour les libellés"
+      - name: Avril
+        description: "Les cotations de avril pour les libellés"
+      - name: Mai
+        description: "Les cotations de mai pour les libellés"
+      - name: Juin
+        description: "Les cotations de juin pour les libellés"
+      - name: Juillet
+        description: "Les cotations de juillet pour les libellés"
+      - name: Août
+        description: "Les cotations de août pour les libellés"
+      - name: Septembre
+        description: "Les cotations de septembre pour les libellés"
+      - name: Octobre
+        description: "Les cotations de octobre pour les libellés"
+      - name: Novembre
+        description: "Les cotations de novembre pour les libellés"
+      - name: Décembre
+        description: "Les cotations de décembre pour les libellés"
+  - name: fruits_a_pepins_2024
+    description: "Table avec les cotations des libellés des fruits à pépins en 2024, récupéré depuis le site RNM"
+    columns:
+      - name: Stade
+        description: "Le stade pour ce libellé"
+        tests:
+          - not_null
+      - name: Marché
+        description: "Le marché pour ce libellé"
+        tests:
+          - not_null
+      - name: Libellé
+        description: "Le libellé, il est composé du nom du produit en majuscule, puis des caractéristiques, ce qui forme le libellé"
+        tests:
+          - not_null
+      - name: Unité
+        description: "L'unité pour ce libellé libellé"
+        tests:
+          - not_null
+      - name: Janvier
+        description: "Les cotations de janvier pour les libellés"
+      - name: Février
+        description: "Les cotations de février pour les libellés"
+      - name: Mars
+        description: "Les cotations de mars pour les libellés"
+      - name: Avril
+        description: "Les cotations de avril pour les libellés"
+      - name: Mai
+        description: "Les cotations de mai pour les libellés"
+      - name: Juin
+        description: "Les cotations de juin pour les libellés"
+      - name: Juillet
+        description: "Les cotations de juillet pour les libellés"
+      - name: Août
+        description: "Les cotations de août pour les libellés"
+      - name: Septembre
+        description: "Les cotations de septembre pour les libellés"
+      - name: Octobre
+        description: "Les cotations de octobre pour les libellés"
+      - name: Novembre
+        description: "Les cotations de novembre pour les libellés"
+      - name: Décembre
+        description: "Les cotations de décembre pour les libellés"
+  - name: fruits_a_pepins_2025
+    description: "Table avec les cotations des libellés des fruits à pépins en 2025, récupéré depuis le site RNM"
+    columns:
+      - name: Stade
+        description: "Le stade pour ce libellé"
+        tests:
+          - not_null
+      - name: Marché
+        description: "Le marché pour ce libellé"
+        tests:
+          - not_null
+      - name: Libellé
+        description: "Le libellé, il est composé du nom du produit en majuscule, puis des caractéristiques, ce qui forme le libellé"
+        tests:
+          - not_null
+      - name: Unité
+        description: "L'unité pour ce libellé libellé"
+        tests:
+          - not_null
+      - name: Janvier
+        description: "Les cotations de janvier pour les libellés"
+      - name: Février
+        description: "Les cotations de février pour les libellés"
+      - name: Mars
+        description: "Les cotations de mars pour les libellés"
+      - name: Avril
+        description: "Les cotations de avril pour les libellés"
+      - name: Mai
+        description: "Les cotations de mai pour les libellés"
+      - name: Juin
+        description: "Les cotations de juin pour les libellés"
+      - name: Juillet
+        description: "Les cotations de juillet pour les libellés"
+      - name: Août
+        description: "Les cotations de août pour les libellés"
+      - name: Septembre
+        description: "Les cotations de septembre pour les libellés"
+      - name: Octobre
+        description: "Les cotations de octobre pour les libellés"
+      - name: Novembre
+        description: "Les cotations de novembre pour les libellés"
+      - name: Décembre
+        description: "Les cotations de décembre pour les libellés"
+  - name: fruits_exotiques_2023
+    description: "Table avec les cotations des libellés des fruits exotiques en 2023, récupéré depuis le site RNM"
+    columns:
+      - name: Stade
+        description: "Le stade pour ce libellé"
+        tests:
+          - not_null
+      - name: Marché
+        description: "Le marché pour ce libellé"
+        tests:
+          - not_null
+      - name: Libellé
+        description: "Le libellé, il est composé du nom du produit en majuscule, puis des caractéristiques, ce qui forme le libellé"
+        tests:
+          - not_null
+      - name: Unité
+        description: "L'unité pour ce libellé libellé"
+        tests:
+          - not_null
+      - name: Janvier
+        description: "Les cotations de janvier pour les libellés"
+      - name: Février
+        description: "Les cotations de février pour les libellés"
+      - name: Mars
+        description: "Les cotations de mars pour les libellés"
+      - name: Avril
+        description: "Les cotations de avril pour les libellés"
+      - name: Mai
+        description: "Les cotations de mai pour les libellés"
+      - name: Juin
+        description: "Les cotations de juin pour les libellés"
+      - name: Juillet
+        description: "Les cotations de juillet pour les libellés"
+      - name: Août
+        description: "Les cotations de août pour les libellés"
+      - name: Septembre
+        description: "Les cotations de septembre pour les libellés"
+      - name: Octobre
+        description: "Les cotations de octobre pour les libellés"
+      - name: Novembre
+        description: "Les cotations de novembre pour les libellés"
+      - name: Décembre
+        description: "Les cotations de décembre pour les libellés"
+  - name: fruits_exotiques_2024
+    description: "Table avec les cotations des libellés des fruits exotiques en 2024, récupéré depuis le site RNM"
+    columns:
+      - name: Stade
+        description: "Le stade pour ce libellé"
+        tests:
+          - not_null
+      - name: Marché
+        description: "Le marché pour ce libellé"
+        tests:
+          - not_null
+      - name: Libellé
+        description: "Le libellé, il est composé du nom du produit en majuscule, puis des caractéristiques, ce qui forme le libellé"
+        tests:
+          - not_null
+      - name: Unité
+        description: "L'unité pour ce libellé libellé"
+        tests:
+          - not_null
+      - name: Janvier
+        description: "Les cotations de janvier pour les libellés"
+      - name: Février
+        description: "Les cotations de février pour les libellés"
+      - name: Mars
+        description: "Les cotations de mars pour les libellés"
+      - name: Avril
+        description: "Les cotations de avril pour les libellés"
+      - name: Mai
+        description: "Les cotations de mai pour les libellés"
+      - name: Juin
+        description: "Les cotations de juin pour les libellés"
+      - name: Juillet
+        description: "Les cotations de juillet pour les libellés"
+      - name: Août
+        description: "Les cotations de août pour les libellés"
+      - name: Septembre
+        description: "Les cotations de septembre pour les libellés"
+      - name: Octobre
+        description: "Les cotations de octobre pour les libellés"
+      - name: Novembre
+        description: "Les cotations de novembre pour les libellés"
+      - name: Décembre
+        description: "Les cotations de décembre pour les libellés"
+  - name: fruits_exotiques_2025
+    description: "Table avec les cotations des libellés des fruits exotiques en 2025, récupéré depuis le site RNM"
+    columns:
+      - name: Stade
+        description: "Le stade pour ce libellé"
+        tests:
+          - not_null
+      - name: Marché
+        description: "Le marché pour ce libellé"
+        tests:
+          - not_null
+      - name: Libellé
+        description: "Le libellé, il est composé du nom du produit en majuscule, puis des caractéristiques, ce qui forme le libellé"
+        tests:
+          - not_null
+      - name: Unité
+        description: "L'unité pour ce libellé libellé"
+        tests:
+          - not_null
+      - name: Janvier
+        description: "Les cotations de janvier pour les libellés"
+      - name: Février
+        description: "Les cotations de février pour les libellés"
+      - name: Mars
+        description: "Les cotations de mars pour les libellés"
+      - name: Avril
+        description: "Les cotations de avril pour les libellés"
+      - name: Mai
+        description: "Les cotations de mai pour les libellés"
+      - name: Juin
+        description: "Les cotations de juin pour les libellés"
+      - name: Juillet
+        description: "Les cotations de juillet pour les libellés"
+      - name: Août
+        description: "Les cotations de août pour les libellés"
+      - name: Septembre
+        description: "Les cotations de septembre pour les libellés"
+      - name: Octobre
+        description: "Les cotations de octobre pour les libellés"
+      - name: Novembre
+        description: "Les cotations de novembre pour les libellés"
+      - name: Décembre
+        description: "Les cotations de décembre pour les libellés"
+  - name: fruits_secs_2023
+    description: "Table avec les cotations des libellés des fruits secs en 2023, récupéré depuis le site RNM"
+    columns:
+      - name: Stade
+        description: "Le stade pour ce libellé"
+        tests:
+          - not_null
+      - name: Marché
+        description: "Le marché pour ce libellé"
+        tests:
+          - not_null
+      - name: Libellé
+        description: "Le libellé, il est composé du nom du produit en majuscule, puis des caractéristiques, ce qui forme le libellé"
+        tests:
+          - not_null
+      - name: Unité
+        description: "L'unité pour ce libellé libellé"
+        tests:
+          - not_null
+      - name: Janvier
+        description: "Les cotations de janvier pour les libellés"
+      - name: Février
+        description: "Les cotations de février pour les libellés"
+      - name: Mars
+        description: "Les cotations de mars pour les libellés"
+      - name: Avril
+        description: "Les cotations de avril pour les libellés"
+      - name: Mai
+        description: "Les cotations de mai pour les libellés"
+      - name: Juin
+        description: "Les cotations de juin pour les libellés"
+      - name: Juillet
+        description: "Les cotations de juillet pour les libellés"
+      - name: Août
+        description: "Les cotations de août pour les libellés"
+      - name: Septembre
+        description: "Les cotations de septembre pour les libellés"
+      - name: Octobre
+        description: "Les cotations de octobre pour les libellés"
+      - name: Novembre
+        description: "Les cotations de novembre pour les libellés"
+      - name: Décembre
+        description: "Les cotations de décembre pour les libellés"
+  - name: fruits_secs_2024
+    description: "Table avec les cotations des libellés des fruits secs en 2024, récupéré depuis le site RNM"
+    columns:
+      - name: Stade
+        description: "Le stade pour ce libellé"
+        tests:
+          - not_null
+      - name: Marché
+        description: "Le marché pour ce libellé"
+        tests:
+          - not_null
+      - name: Libellé
+        description: "Le libellé, il est composé du nom du produit en majuscule, puis des caractéristiques, ce qui forme le libellé"
+        tests:
+          - not_null
+      - name: Unité
+        description: "L'unité pour ce libellé libellé"
+        tests:
+          - not_null
+      - name: Janvier
+        description: "Les cotations de janvier pour les libellés"
+      - name: Février
+        description: "Les cotations de février pour les libellés"
+      - name: Mars
+        description: "Les cotations de mars pour les libellés"
+      - name: Avril
+        description: "Les cotations de avril pour les libellés"
+      - name: Mai
+        description: "Les cotations de mai pour les libellés"
+      - name: Juin
+        description: "Les cotations de juin pour les libellés"
+      - name: Juillet
+        description: "Les cotations de juillet pour les libellés"
+      - name: Août
+        description: "Les cotations de août pour les libellés"
+      - name: Septembre
+        description: "Les cotations de septembre pour les libellés"
+      - name: Octobre
+        description: "Les cotations de octobre pour les libellés"
+      - name: Novembre
+        description: "Les cotations de novembre pour les libellés"
+      - name: Décembre
+        description: "Les cotations de décembre pour les libellés"
+  - name: fruits_secs_2025
+    description: "Table avec les cotations des libellés des fruits secs en 2025, récupéré depuis le site RNM"
+    columns:
+      - name: Stade
+        description: "Le stade pour ce libellé"
+        tests:
+          - not_null
+      - name: Marché
+        description: "Le marché pour ce libellé"
+        tests:
+          - not_null
+      - name: Libellé
+        description: "Le libellé, il est composé du nom du produit en majuscule, puis des caractéristiques, ce qui forme le libellé"
+        tests:
+          - not_null
+      - name: Unité
+        description: "L'unité pour ce libellé libellé"
+        tests:
+          - not_null
+      - name: Janvier
+        description: "Les cotations de janvier pour les libellés"
+      - name: Février
+        description: "Les cotations de février pour les libellés"
+      - name: Mars
+        description: "Les cotations de mars pour les libellés"
+      - name: Avril
+        description: "Les cotations de avril pour les libellés"
+      - name: Mai
+        description: "Les cotations de mai pour les libellés"
+      - name: Juin
+        description: "Les cotations de juin pour les libellés"
+      - name: Juillet
+        description: "Les cotations de juillet pour les libellés"
+      - name: Août
+        description: "Les cotations de août pour les libellés"
+      - name: Septembre
+        description: "Les cotations de septembre pour les libellés"
+      - name: Octobre
+        description: "Les cotations de octobre pour les libellés"
+      - name: Novembre
+        description: "Les cotations de novembre pour les libellés"
+      - name: Décembre
+        description: "Les cotations de décembre pour les libellés"
   - name: libelle_cotation
     description: "Table représentant les cotations de chaque libellé pour chaque mois"
     columns:
@@ -40,7 +814,6 @@ models:
         description: "La variation par rapport au mois précédent"
       - name: variation_pourcentage_mois_precedent
         description: "La variation en pourcentage par rapport au mois précédent"
-
   - name: produit_cotation
     description: "Table représentant les cotations de chaque produit, pour chaque mois. Un produit est l'aggrégation de tous ses libellés"
     columns:
